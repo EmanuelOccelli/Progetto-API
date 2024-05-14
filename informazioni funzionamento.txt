@@ -1,0 +1,42 @@
+
+Il seguente sito utilizza le API di destiny 2 per ottenere lo username e la piattaforma dell'account collegato in maniera statica (causa per il login servono certificazioni https,ecc)
+
+oltre all'username dell'account ottiene in Personaggi.js l'elenco dei personaggi di quell'account segnati da degli id, 
+ogni id contiene tutti i dati riguardanti i personaggi, oggetti equipaggiati, classe, nome, cosmetici ecc.
+
+Sotto Personaggi.js ci sono 3 componenti con react-router-dom ognuno con i dati del proprio personaggio in base agli id ottenuti,
+non son riuscito a passargli da Personaggi.js, perche o il componente non li riceve o 
+non riesce proprio a spedirglieli per una questione di tempo che la axios.get(fetch) 
+ci mette a ottenere i dati e quindi si piantava in modo completo perciò quelli che servivano 
+gli ho semplicemente copiati e incollati dai console.log qui di seguito:
+
+(Riga 79-81 di Personaggi.js: 
+HArrayHunter codici Hash all'interno del personaggio cacciatore,
+HarrayTitano codici hash degli oggetti interni al personaggio Titano,
+HArraystregone hash degli oggetti all'interno del personaggio stregone)
+
+in modo da ottenere nome e icona dell'oggetto equipaggiato da un itemHash che è un codice intero messo in un array per ogni personaggio
+facendo si che ognuno abbia le proprie cose, è fatto in maniera statica (quindi cambiando disposizione o oggetti equipaggiati da destiny non cambiano anche sul sito) ma senza login si possono ottenere solo cosi.
+
+Ha all'interno l'id del mio account personale perche riniziare un account di test dovrei rifare tutti i passaggi statici, non ha nessuna email o password riceve soltanto Username e piattaforma dell'utente
+
+NB: Gli oggetti equipaggiati non hanno traduzione
+NB: Cio che stampa la pagina sono gli oggetti equipaggiati al momento della creazione di essa
+
+Le API interne erano le uniche con cui era possibile fare qualcosa senza il login
+
+ListaAmici.js non funziona se pre per la questione del token di accesso e della login(ho provatro con il token statico fornito da bungie ma non funziona comunque)
+RicercaArmiArmature ha solo le ricerche in inglese, se si prova a farle in altre lingue si pianta
+
+estensioni x far funzionare tutto:
+    //Librerie funzionali
+    npm install axios // la fetch non andava ho dovuto andarla a cercare
+    npm install react-router-dom //per lo spostamento tra componenti
+    npm install react-bootstrap //bootstrap x le navbar
+    //Librerie grafiche
+    npm install animate.css //animazioni
+    npm install bootstrap@5.0.2 //bootstrap x il sito
+    npm install styled-components //stili delle navbar
+
+
+

@@ -1,0 +1,23 @@
+/*css ricerca*/
+
+.scr{
+    font-size: 30px;
+    color: white;
+}
+.destiny-input {
+    background-color: #1f1f1f;
+    color: #fff;
+    border-color: #343a40; 
+  }
+  
+  .destiny-button {
+    background-color: #3498db; 
+    color: #fff; 
+    border-color: #3498db; 
+  }
+  
+  .destiny-button:hover {
+    background-color: #217dbb; 
+    border-color: #217dbb; 
+  }
+  
